@@ -1,0 +1,36 @@
+{
+  "name": "Mi primer PWA",
+  "short_name": "MiPWA",
+  "start_url": "index.html",
+  "display": "standalone",
+  "backgroundcolor": "#fafafe",
+  "theme_color": "#317EFB",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/house.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/mugi.png",
+      "sizes": "192x192.png",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android.png",
+      "sizes": "256x256.png",
+      "type":"image/png"
+    },
+    {
+      "src": "icons/bleach.png",
+      "sizes": "384x384.png",
+      "type": "image/png"
+    },
+    {
+      "src": "magic.png",
+      "sizes": "512x512.png",
+      "type": "image/png"
+    }
+  ]
+}

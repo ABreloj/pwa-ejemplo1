@@ -4,24 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Primera PWA</title>
+
     
     <link rel="manifest" href="manifest.json" />
-    
     <meta name="theme-color" content="#317EFB" />
   </head>
   <body>
     <h1>Bienvenido a mi PWA</h1>
     <p>Se puede instalar en tu dispositivo móvil</p>
-    <button onclick="alert('Hola desde la PWA')">Click aqui</button>
-    
+    <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
           .register("sw.js")
           .then((reg) => console.log("Service Worker registrado", reg))
-          .catch((err) =>
-            console.warn("Error al registrar el Service Worker", err)
-          );
+          .catch((err) => console.warn("Error al registrar el Service Worker", err));
       }
     </script>
   </body>

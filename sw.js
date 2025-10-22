@@ -22,9 +22,16 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request).catch(() => caches.match(`${BASE_PATH}offline.html`));
-    })
+    fetch(event.request)
+      .then((response) => {
+        return response; // Si hay internet, responde directo desde red
+      })
+      .catch(() => {
+        return caches.match(event.request).then((res) => {
+          // Si está en caché, lo devuelve. Si no, manda offline.html
+          return res || caches.match(`${BASE_PATH}offline.html`);
+        });
+      })
   );
 });
 

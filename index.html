@@ -3,10 +3,346 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi PWA - Offline</title>
+    <title>Mi Primera PWA</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#317EFB" />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      #offline {
+        display: none;
+        color: red;
+      }
+    </style>
   </head>
   <body>
-    <h1>Estás offline</h1>
-    <p>Lo sentimos, pero no tienes conexión a Internet.</p>
+    <div id="online">
+      <h1>Bienvenido a mi PWA</h1>
+      <p>Se puede instalar en tu dispositivo móvil</p>
+      <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+    </div>
+
+    <div id="offline">
+      <h1>Estás offline</h1>
+      <p>Lo sentimos, pero no tienes conexión a Internet.</p>
+    </div>
+
+    <script>
+      // Registrar el Service Worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("Service Worker registrado", reg))
+          .catch((err) => console.warn("Error al registrar el Service Worker", err));
+      }
+
+      // Función para actualizar la vista según el estado de conexión
+      function actualizarEstado() {
+        const online = navigator.onLine;
+        document.getElementById("online").style.display = online ? "block" : "none";
+        document.getElementById("offline").style.display = online ? "none" : "block";
+      }
+
+      // Detectar cambios en conexión
+      window.addEventListener("online", actualizarEstado);
+      window.addEventListener("offline", actualizarEstado);
+
+      // Revisar al cargar la página
+      actualizarEstado();
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera PWA</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#317EFB" />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      #offline {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="online">
+      <h1>Bienvenido a mi PWA</h1>
+      <p>Se puede instalar en tu dispositivo móvil</p>
+      <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+    </div>
+
+    <div id="offline">
+      <h1>Estás offline</h1>
+      <p>Lo sentimos, pero no tienes conexión a Internet.</p>
+    </div>
+
+    <script>
+      // Registrar el Service Worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("Service Worker registrado", reg))
+          .catch((err) => console.warn("Error al registrar el Service Worker", err));
+      }
+
+      // Función para actualizar la vista según el estado de conexión
+      function actualizarEstado() {
+        const online = navigator.onLine;
+        document.getElementById("online").style.display = online ? "block" : "none";
+        document.getElementById("offline").style.display = online ? "none" : "block";
+      }
+
+      // Detectar cambios en conexión
+      window.addEventListener("online", actualizarEstado);
+      window.addEventListener("offline", actualizarEstado);
+
+      // Revisar al cargar la página
+      actualizarEstado();
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera PWA</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#317EFB" />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      #offline {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="online">
+      <h1>Bienvenido a mi PWA</h1>
+      <p>Se puede instalar en tu dispositivo móvil</p>
+      <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+    </div>
+
+    <div id="offline">
+      <h1>Estás offline</h1>
+      <p>Lo sentimos, pero no tienes conexión a Internet.</p>
+    </div>
+
+    <script>
+      // Registrar el Service Worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("Service Worker registrado", reg))
+          .catch((err) => console.warn("Error al registrar el Service Worker", err));
+      }
+
+      // Función para actualizar la vista según el estado de conexión
+      function actualizarEstado() {
+        const online = navigator.onLine;
+        document.getElementById("online").style.display = online ? "block" : "none";
+        document.getElementById("offline").style.display = online ? "none" : "block";
+      }
+
+      // Detectar cambios en conexión
+      window.addEventListener("online", actualizarEstado);
+      window.addEventListener("offline", actualizarEstado);
+
+      // Revisar al cargar la página
+      actualizarEstado();
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera PWA</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#317EFB" />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      #offline {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="online">
+      <h1>Bienvenido a mi PWA</h1>
+      <p>Se puede instalar en tu dispositivo móvil</p>
+      <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+    </div>
+
+    <div id="offline">
+      <h1>Estás offline</h1>
+      <p>Lo sentimos, pero no tienes conexión a Internet.</p>
+    </div>
+
+    <script>
+      // Registrar el Service Worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("Service Worker registrado", reg))
+          .catch((err) => console.warn("Error al registrar el Service Worker", err));
+      }
+
+      // Función para actualizar la vista según el estado de conexión
+      function actualizarEstado() {
+        const online = navigator.onLine;
+        document.getElementById("online").style.display = online ? "block" : "none";
+        document.getElementById("offline").style.display = online ? "none" : "block";
+      }
+
+      // Detectar cambios en conexión
+      window.addEventListener("online", actualizarEstado);
+      window.addEventListener("offline", actualizarEstado);
+
+      // Revisar al cargar la página
+      actualizarEstado();
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera PWA</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#317EFB" />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      #offline {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="online">
+      <h1>Bienvenido a mi PWA</h1>
+      <p>Se puede instalar en tu dispositivo móvil</p>
+      <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+    </div>
+
+    <div id="offline">
+      <h1>Estás offline</h1>
+      <p>Lo sentimos, pero no tienes conexión a Internet.</p>
+    </div>
+
+    <script>
+      // Registrar el Service Worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("Service Worker registrado", reg))
+          .catch((err) => console.warn("Error al registrar el Service Worker", err));
+      }
+
+      // Función para actualizar la vista según el estado de conexión
+      function actualizarEstado() {
+        const online = navigator.onLine;
+        document.getElementById("online").style.display = online ? "block" : "none";
+        document.getElementById("offline").style.display = online ? "none" : "block";
+      }
+
+      // Detectar cambios en conexión
+      window.addEventListener("online", actualizarEstado);
+      window.addEventListener("offline", actualizarEstado);
+
+      // Revisar al cargar la página
+      actualizarEstado();
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera PWA</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#317EFB" />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      #offline {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="online">
+      <h1>Bienvenido a mi PWA</h1>
+      <p>Se puede instalar en tu dispositivo móvil</p>
+      <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+    </div>
+
+    <div id="offline">
+      <h1>Estás offline</h1>
+      <p>Lo sentimos, pero no tienes conexión a Internet.</p>
+    </div>
+
+    <script>
+      // Registrar el Service Worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("Service Worker registrado", reg))
+          .catch((err) => console.warn("Error al registrar el Service Worker", err));
+      }
+
+      // Función para actualizar la vista según el estado de conexión
+      function actualizarEstado() {
+        const online = navigator.onLine;
+        document.getElementById("online").style.display = online ? "block" : "none";
+        document.getElementById("offline").style.display = online ? "none" : "block";
+      }
+
+      // Detectar cambios en conexión
+      window.addEventListener("online", actualizarEstado);
+      window.addEventListener("offline", actualizarEstado);
+
+      // Revisar al cargar la página
+      actualizarEstado();
+    </script>
   </body>
 </html>

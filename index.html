@@ -3,24 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Primera PWA</title>
-
-    
-    <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#317EFB" />
+    <title>Mi PWA - Offline</title>
   </head>
   <body>
-    <h1>Bienvenido a mi PWA</h1>
-    <p>Se puede instalar en tu dispositivo móvil</p>
-    <button onclick="alert('Hola desde la PWA')">Click aquí</button>
-
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("sw.js")
-          .then((reg) => console.log("Service Worker registrado", reg))
-          .catch((err) => console.warn("Error al registrar el Service Worker", err));
-      }
-    </script>
+    <h1>Estás offline</h1>
+    <p>Lo sentimos, pero no tienes conexión a Internet.</p>
   </body>
 </html>
